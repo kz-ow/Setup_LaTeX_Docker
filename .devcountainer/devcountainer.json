@@ -1,0 +1,37 @@
+{
+    "name": "LaTeX Devcontainer with Enhanced Tools",
+    "dockerComposeFile": ["../docker-compose.yml"],
+    "service": "latex",
+    "workspaceFolder": "/workspace",
+    "extensions": [
+      "james-yu.latex-workshop",
+      "streetsidesoftware.code-spell-checker",
+      "mclmcl.laTeX-BibTeX-Formatter",
+      "yzhang.markdown-all-in-one",
+      "CoenraadS.bracket-pair-colorizer-2",
+      "eamodio.gitlens"
+    ],
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash",
+      "latex-workshop.latex.toolchain": [
+        {
+          "name": "latexmk (pdfdflatex)",
+          "command": "latexmk",
+          "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-pdf"
+          ]
+        }
+      ],
+      "latex-workshop.latex.autoBuild.run": "onFileChange",
+      "latex-workshop.view.pdf.viewer": "tab"
+    },
+    "postCreateCommand": "./scripts/setup.sh",
+    "containerEnv": {
+        "DISABLE_HOT_RELOAD": "0",
+        "LANG_TYPE": "japanese"
+    }
+  }
+  
