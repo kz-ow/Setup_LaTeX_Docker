@@ -28,7 +28,7 @@
       "latex-workshop.latex.autoBuild.run": "onFileChange",
       "latex-workshop.view.pdf.viewer": "tab"
     },
-    "postCreateCommand": "./scripts/setup.sh",
+    "postCreateCommand": "../scripts/setup.sh",
     "containerEnv": {
         "DISABLE_HOT_RELOAD": "0",
         "LANG_TYPE": "japanese"
