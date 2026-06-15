@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - "sample/**/*.tex"
+      - "papers/**/*.tex"
+      - "format/**/*.tex"
       - ".textlintrc"
       - "prh.yml"
   pull_request:
@@ -24,5 +25,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run textlint (Japanese)
-        run: npx textlint sample/japanese/sections/*.tex sample/japanese/main.tex
+      - name: Run textlint
+        run: |
+          FILES=$(find papers/ format/ -name "*.tex" 2>/dev/null | head -50)
+          if [ -n "$FILES" ]; then
+            npx textlint $FILES
+          else
+            echo "No .tex files found, skipping."
+          fi
