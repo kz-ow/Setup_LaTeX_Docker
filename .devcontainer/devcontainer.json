@@ -1,5 +1,5 @@
 {
-  "name": "LaTeX DevContainer",
+  "name": "LaTeXClaude",
   "build": {
     "dockerfile": "../Dockerfile"
   },
@@ -11,7 +11,7 @@
     "vscode": {
       "extensions": [
         "James-Yu.latex-workshop",
-        "anthropics.claude-code",
+        "anthropic.claude-code",
         "valentjn.vscode-ltex",
         "streetsidesoftware.code-spell-checker",
         "mhutchie.git-graph",
@@ -34,7 +34,25 @@
             "tools": ["latexmk"]
           }
         ],
-        "ltex.language": "auto"
+        "ltex.language": "auto",
+        "ltex.dictionary": {
+          "en-US": [
+            "ipsj", "IPSJ", "ieice", "IEICE",
+            "latexmk", "latexmkrc", "latexdiff",
+            "platex", "uplatex", "lualatex", "pdflatex",
+            "dvipdfmx", "synctex", "nonstopmode",
+            "biber", "bibtex", "upbibtex", "biblatex", "biblio",
+            "jsarticle", "documentclass"
+          ],
+          "ja-JP": [
+            "ipsj", "IPSJ", "ieice", "IEICE",
+            "latexmk", "latexmkrc", "latexdiff",
+            "platex", "uplatex", "lualatex", "pdflatex",
+            "dvipdfmx", "synctex", "nonstopmode",
+            "biber", "bibtex", "upbibtex", "biblatex", "biblio",
+            "jsarticle", "documentclass"
+          ]
+        }
       }
     }
   }

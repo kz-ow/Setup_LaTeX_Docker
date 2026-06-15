@@ -1,0 +1,18 @@
+{
+  "name": "latex-devcontainer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "textlint sections/*.tex main.tex",
+    "fix": "textlint --fix sections/*.tex main.tex"
+  },
+  "devDependencies": {
+    "textlint": "^14.0.0",
+    "textlint-rule-prh": "^6.0.0",
+    "textlint-rule-no-dropping-the-ra": "^2.0.0",
+    "textlint-rule-ja-no-successive-word": "^2.0.0",
+    "textlint-rule-ja-no-mixed-period": "^2.0.0",
+    "textlint-rule-no-double-negative-ja": "^2.0.0",
+    "textlint-filter-rule-comments": "^1.2.2"
+  }
+}

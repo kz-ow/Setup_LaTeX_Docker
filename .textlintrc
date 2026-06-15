@@ -1,0 +1,16 @@
+{
+  "filters": {
+    "comments": true
+  },
+  "rules": {
+    "prh": {
+      "rulePaths": ["./prh.yml"]
+    },
+    "no-dropping-the-ra": true,
+    "ja-no-successive-word": true,
+    "ja-no-mixed-period": {
+      "periodMark": "。"
+    },
+    "no-double-negative-ja": true
+  }
+}

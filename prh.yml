@@ -1,0 +1,22 @@
+version: 1
+rules:
+  # アルファベット表記ゆれ
+  - expected: インターネット
+    patterns: [インターネット, internet]
+  - expected: ウェブ
+    patterns: [ウェブ, WEB, web]
+  - expected: サーバー
+    patterns: [サーバ, サーバー]
+  - expected: ユーザー
+    patterns: [ユーザ, ユーザー]
+  - expected: コンピューター
+    patterns: [コンピュータ, コンピューター]
+  - expected: データ
+    patterns: [データ, data]
+  # 論文でよく使う語
+  - expected: 提案手法
+    patterns: [提案する手法, 提案された手法]
+  - expected: 実験結果
+    patterns: [実験の結果]
+  - expected: 従来手法
+    patterns: [従来の手法, 既存手法, 既存の手法]
